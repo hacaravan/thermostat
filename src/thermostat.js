@@ -8,4 +8,8 @@ class Thermostat{
     this.temperature += 1;
   };
 
+  _down() {
+    this.temperature -= 1;
+  };
+
 }

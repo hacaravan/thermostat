@@ -14,4 +14,9 @@ describe('Thermostat', function() {
     expect(thermostat.temperature).toEqual(21);
   });
 
+  it('drops 1˚c whenever down is called', function(){
+    thermostat._down();
+    expect(thermostat.temperature).toEqual(19);
+  });
+
 });
