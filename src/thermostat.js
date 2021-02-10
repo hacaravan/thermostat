@@ -1,7 +1,7 @@
 class Thermostat{
 
 
-  contributor() {
+  constructor() {
     this.temperature = 20;
   };
 
