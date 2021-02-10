@@ -31,4 +31,17 @@ describe('Thermostat', function() {
       thermostat._up()}).toThrow(new Error ('maximum temperature in power saving mode is 25˚c'));
   });
 
+  it('raises an error when taking temperature above 32˚c', function(){
+    thermostat._changePowerSavingMode();
+    for (i = 0; i < 12; i++) {thermostat._up()};
+    expect(function() {
+      thermostat._up()}).toThrow(new Error ('maximum temperature is 32˚c'));
+  });
+
+  it('switches power saving mode', function(){
+    expect(thermostat.powerSaving).toEqual(true);
+    thermostat._changePowerSavingMode()
+    expect(thermostat.powerSaving).toEqual(false);
+  });
+
 });
