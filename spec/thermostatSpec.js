@@ -1,11 +1,11 @@
 describe('Thermostat', function() {
-    let thermostat;
+  let thermostat;
 
   beforeEach(function() {
     thermostat = new Thermostat;
   });
 
-  it('starts at 20•c', function(){
+  it('starts at 20˚c', function(){
     expect(thermostat.temperature).toEqual(20);
   });
 
