@@ -39,16 +39,22 @@ describe('Thermostat', function() {
   });
 
   it('switches power saving mode', function(){
-    expect(thermostat.powerSaving).toEqual(true);
+    expect(thermostat.powerSavingMode).toEqual(true);
     thermostat._changePowerSavingMode()
-    expect(thermostat.powerSaving).toEqual(false);
+    expect(thermostat.powerSavingMode).toEqual(false);
+  });
+
+  it('lowers the temperature to 25˚C when switched to power saving mode if temperature exceeds 25˚C', function() {
+    thermostat._changePowerSavingMode();
+    for (i = 0; i < 10; i++) {thermostat._up()};
+    thermostat._changePowerSavingMode();
+    expect(thermostat.temperature).toEqual(25);
   });
 
   it('resets the temperature to 20˚C when reset is called', function() {
     thermostat._reset();
     expect(thermostat.temperature).toEqual(20);
   });
-
 
   it('returns the current energy usage', function() {
     for (i = 0; i < 3; i++) {thermostat._down()};
