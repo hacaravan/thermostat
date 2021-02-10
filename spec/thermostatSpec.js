@@ -49,4 +49,15 @@ describe('Thermostat', function() {
     expect(thermostat.temperature).toEqual(20);
   });
 
+
+  it('returns the current energy usage', function() {
+    for (i = 0; i < 3; i++) {thermostat._down()};
+      expect(thermostat._currentEnergyUsage()).toEqual('low-usage')
+    for (i = 0; i < 8; i++) {thermostat._up()};
+      expect(thermostat._currentEnergyUsage()).toEqual('medium-usage')
+    thermostat._changePowerSavingMode();
+    thermostat._up();
+    expect(thermostat._currentEnergyUsage()).toEqual('high-usage')
+  });
+
 });
