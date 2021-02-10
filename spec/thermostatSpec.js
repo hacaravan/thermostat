@@ -19,4 +19,10 @@ describe('Thermostat', function() {
     expect(thermostat.temperature).toEqual(19);
   });
 
+  it('raises an error when taking temperature below 10˚c', function(){
+    for (i = 0; i < 10; i++) {thermostat._down()};
+    expect(function() {
+      thermostat._down()}).toThrow(new Error ('minimum temperature is 10˚c'));
+  });
+
 });
