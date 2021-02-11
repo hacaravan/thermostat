@@ -1,41 +1,58 @@
 <!DOCTYPE html>
+
 <html>
   <head>
     <title>Thermostat</title>
     <link rel="stylesheet" href="stylesheet.css"/>
   </head>
+
   <body>
     <div class="unit">
       <section>
         <div class="screen">
-          <div class="clock" id="clock-display"></div>
-          <div id="temperature-display" class="box-temperature">25</div>
+
+          <div class="box-clock">
+            <div class="box-date-time" id="clock-display" style="width: 33.33%;"></div>
+            <div class="box-date-time" id="date-display" style="width: 66.66%;"></div>
+          </div>
+
+          <div class="box-temperature" id="temperature-display">25</div>
+          <div class="box-temperature-back">88</div>
+
           <div class="box-celsius">
             <div>.0˚C</div>
             <div style="text-transform: uppercase;">max</div>
           </div>
+
           <div class="box-vertical-stack">
+
             <div class="box-vertical" id="powersavingmode-display">
               <div style="font-size: 250%;">Power Save</div>
             </div>
+
             <div class="box-vertical" id="currentenergyusage-display">
               <div style="font-size: 125%;">Energy Usage</div>
               <div style="padding-top: 25px; font-size: 250%;">Medium</div>
             </div>
+
           </div>
+
         </div>
+
         <div class="controls">
-          <button class="button" id="temperature-up" style="font-size: 500%;">+</button>
-          <button class="button" id="temperature-down" style="font-size: 500%;">−</button>
-          <button class="button" id="temperature-reset" style="font-size: 150%">Reset</button>
-          <button class="button" id="powersavingmode" style="font-size: 125%">Power Save Mode</button>
+          <button class="button" id="temperature-up" style="font-size: 65pt;">+</button>
+          <button class="button" id="temperature-down" style="font-size: 65pt;">−</button>
+          <button class="button" id="temperature-reset" style="font-size: 15pt;">Reset</button>
+          <button class="button" id="powersavingmode" style="font-size: 15pt;">Power Save Mode</button>
         </div>
+
       </section>
+
     </div>
 
     <script src="jquery-3.5.1.js"></script>
-    <script src="src/jquery.js"></script>
     <script src="src/clock.js"></script>
     <script src="src/thermostat.js"></script>
+
   </body>
 </html>

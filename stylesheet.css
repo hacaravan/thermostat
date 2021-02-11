@@ -8,7 +8,7 @@
 }
 
 body {
-  background-color: lightblue;
+  background-color: white;
 }
 
 .unit {
@@ -19,27 +19,35 @@ body {
   text-align: center;
   max-width: 600px;
   height: 600px;
-  background-color: #eeeee4;
+  background-color: #d6d5cf;
 }
 
 .screen {
+  position: relative;
   border: 5px solid black;
   border-radius: 20px;
   margin: 25px;
   padding: 10px;
   height: 400px;
-  background-color: black;
+  background-color: #8c9b96;
   font-family: 'digital-clock-font';
-  color: green;
+  color: black;
 }
 
-.clock {
+.box-clock {
+  display: table;
   height: 15%;
+  width: 100%;
   font-size: 30pt;
-  padding-top: 5px;
 }
 
-.box-temperature {
+.box-date-time {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: right;
+}
+
+.box-temperature-back {
   float: left;
   height: 85%;
   width: 50%;
@@ -47,6 +55,18 @@ body {
   font-size: 150pt;
   text-align: right;
   padding-top: 40px;
+  color: #808A87;
+}
+
+.box-temperature {
+  position: absolute;
+  height: 85%;
+  width: 50%;
+  padding: 0px;
+  font-size: 150pt;
+  text-align: right;
+  padding-top: 40px;
+  margin-left: -10px;
 }
 
 .box-celsius {
@@ -78,14 +98,12 @@ body {
 }
 
 .button {
-  display: table-cell;
-  vertical-align: middle;
   border: 3px solid black;
   border-radius: 10px;
   width: 100px;
   height: 100px;
   margin-left: 7px;
   margin-right: 7px;
-  text-align: center;
+  background-color: #d7d7d7;
   text-transform: uppercase;
 }
