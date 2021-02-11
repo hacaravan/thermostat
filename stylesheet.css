@@ -1,0 +1,52 @@
+body {
+  background-color: lightblue;
+}
+
+@font-face {
+    font-family: 'digital-clock-font';
+    src: url('public/alarm_clock.ttf');
+}
+
+.unit {
+  border: 3px solid black;
+  border-radius: 25px;
+  margin: auto;
+  margin-top: 50px;
+  text-align: center;
+  max-width: 600px;
+  height: 600px;
+  background-color: #eeeee4;
+}
+
+.screen {
+  border: 5px solid black;
+  border-radius: 20px;
+  margin: 25px;
+  height: 400px;
+  background-color: black;
+
+  font-family: 'digital-clock-font';
+  color: green;
+}
+
+.controls {
+  /* border: 5px dashed yellow; */
+  border-radius: 10px;
+  margin: 10px;
+  height: 100px;
+  margin: 25px;
+}
+
+.button {
+  border: 2px solid black;
+  border-radius: 10px;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  margin-left: 7px;
+  margin-right: 7px;
+}
+
+.button text {
+  color: red;
+}

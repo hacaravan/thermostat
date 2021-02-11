@@ -2,19 +2,24 @@
 <html>
   <head>
     <title>Thermostat</title>
+    <link rel="stylesheet" href="stylesheet.css"/>
   </head>
   <body>
-    <section>
-      <h1 id="temperature-display">Temperature</h1>
-      <h1 id="powersavingmode-display">Power Saving Mode</h1>
-      <p>
-        <button id="temperature-up">+</button>
-        <button id="temperature-down">-</button>
-        <button id="temperature-reset">Reset</button>
-        Power Saving Mode: <span id="power-saving-status">on</span>
-        <button id="powersavingmode">Power Saving Mode</button>
-      </p>
-    </section>
+    <div class="unit">
+      <section>
+        <div class="screen">
+          <h1 id="temperature-display">Temperature</h1>
+          <h1 id="powersavingmode-display">Power Saving Mode</h1>
+          <h1 id="currentenergyusage-display">Current Energy Usage</h1>
+        </div>
+        <div class="controls">
+          <button class="button" id="temperature-up">+</button>
+          <button class="button" id="temperature-down">-</button>
+          <button class="button" id="temperature-reset">Reset</button>
+          <button class="button" id="powersavingmode">Power Saving Mode</button>
+        </div>
+      </section>
+    </div>
   <script src="src/thermostat.js"></script>
   </body>
 </html>
