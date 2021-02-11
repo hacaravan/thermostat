@@ -67,8 +67,8 @@ body {
 
 .box-temperature-back {
   float: left;
-  height: 85%;
-  width: 50%;
+  height: 315px;
+  width: 255px;
   padding: 0px;
   font-size: 150pt;
   text-align: right;
@@ -78,27 +78,34 @@ body {
 
 .box-temperature {
   position: absolute;
-  height: 85%;
-  width: 50%;
+  height: 315px;
+  width: 255px;
   padding: 0px;
   font-size: 150pt;
   text-align: right;
   padding-top: 40px;
-  margin-left: -10px;
 }
 
 .box-celsius {
   float: left;
-  height: 85%;
-  width: 16.66%;
+  height: 315px;
+  width: 85px;
+  padding-top: 70px;
+  font-size: 250%;
+}
+
+.box-celsius {
+  float: left;
+  height: 315px;
+  width: 85px;
   padding-top: 70px;
   font-size: 250%;
 }
 
 .box-vertical-stack {
   float: right;
-  width: 33.33%;
-  height: 85%;
+  width: 170px;
+  height: 315px;
 }
 
 .box-vertical {
