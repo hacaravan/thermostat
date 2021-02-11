@@ -1,10 +1,49 @@
+@font-face {
+    font-family: 'digital-clock-font';
+    src: url('public/alarm_clock.ttf');
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: lightblue;
 }
 
-@font-face {
-    font-family: 'digital-clock-font';
-    src: url('public/alarm_clock.ttf');
+.box-temperature {
+  float: left;
+  height: 80%;
+  width: 50%;
+  padding: 0px;
+  font-size: 1250%;
+  text-align: right;
+  padding-top: 40px;
+}
+
+.box-celsius {
+  float: left;
+  height: 80%;
+  width: 16.66%;
+  padding-top: 70px;
+  font-size: 250%;
+}
+
+.box-vertical-stack {
+  float: right;
+  width: 33.33%;
+  height: 80%;
+  padding: 10%;
+  display: inline-block;
+}
+
+.box-powersavingmode {
+  border: 1px solid white;
+  height: 45%;
+}
+.box-currentenergyusage {
+  border: 1px solid white;
+  height: 45%;
 }
 
 .unit {
@@ -24,7 +63,6 @@ body {
   margin: 25px;
   height: 400px;
   background-color: black;
-
   font-family: 'digital-clock-font';
   color: green;
 }
