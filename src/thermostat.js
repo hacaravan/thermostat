@@ -13,13 +13,13 @@ class Thermostat{
       {throw new Error ('maximum temperature in power saving mode is 25˚C')}
     else if (this.powerSavingMode === false && this.temperature === this.MAXIMUM_TEMPERATURE)
       {throw new Error ('maximum temperature is 32˚C')};
-    this.temperature += 1;
+    this.temperature ++;
   };
 
   _down() {
     if (this.temperature === this.MINIMUM_TEMPERATURE)
       {throw new Error ('minimum temperature is 10˚C')}
-    else {this.temperature -= 1;};
+    else {this.temperature --;};
   };
 
   _changePowerSavingMode() {
