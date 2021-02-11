@@ -11,50 +11,6 @@ body {
   background-color: lightblue;
 }
 
-.box-temperature {
-  float: left;
-  height: 80%;
-  width: 50%;
-  padding: 0px;
-  font-size: 1250%;
-  text-align: right;
-  padding-top: 40px;
-}
-
-.box-celsius {
-  float: left;
-  height: 80%;
-  width: 16.66%;
-  padding-top: 70px;
-  font-size: 250%;
-}
-
-.box-vertical-stack {
-  float: right;
-  width: 33.33%;
-  height: 80%;
-  display: inline-block;
-}
-
-.box-powersavingmode {
-  height: 45%;
-  text-transform: uppercase;
-}
-.box-currentenergyusage {
-  height: 45%;
-  text-transform: uppercase;
-}
-
-.key {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  font-size: 125%
-}
-
-.mode {
-  font-size: 250%
-}
-
 .unit {
   border: 3px solid black;
   border-radius: 25px;
@@ -70,10 +26,47 @@ body {
   border: 5px solid black;
   border-radius: 20px;
   margin: 25px;
+  padding: 10px;
   height: 400px;
   background-color: black;
   font-family: 'digital-clock-font';
   color: green;
+}
+
+.clock {
+  height: 15%;
+  font-size: 30pt;
+  padding-top: 5px;
+}
+
+.box-temperature {
+  float: left;
+  height: 85%;
+  width: 50%;
+  padding: 0px;
+  font-size: 150pt;
+  text-align: right;
+  padding-top: 40px;
+}
+
+.box-celsius {
+  float: left;
+  height: 85%;
+  width: 16.66%;
+  padding-top: 70px;
+  font-size: 250%;
+}
+
+.box-vertical-stack {
+  float: right;
+  width: 33.33%;
+  height: 85%;
+}
+
+.box-vertical {
+  height: 50%;
+  padding-top: 25pt;
+  text-transform: uppercase;
 }
 
 .controls {
