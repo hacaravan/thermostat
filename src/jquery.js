@@ -1,22 +1,15 @@
 $( document ).ready(function() {
   thermostat = new Thermostat;
 
+  const _updateMaxStatement = () => {
+    let maxStatement = thermostat.isMaxTemp() ? "Max" : "";
+    $( "#max-statement" ).html(maxStatement);
+  };
+
   const _updateTempDisplay = () => {
     $( "#temperature-display" ).html(thermostat.temperature)
     $( "#energyusage" ).html(thermostat._currentEnergyUsage())
-    _updateMaxStatement()
-  };
-
-  const _updateMaxStatement = () => {
-    isMax = () => {
-      console.log("Calling Max Statement")
-      if(thermostat.isMaxTemp()) {
-        return "Max"
-      } else {
-        return ""
-      };
-    };
-    $( "max-statement" ).html(isMax)
+    _updateMaxStatement();
   };
 
   _updateTempDisplay();
