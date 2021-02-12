@@ -33,6 +33,8 @@ body {
   color: black;
 }
 
+/* Date & Time Display */
+
 .box-clock {
   display: table;
   height: 55px;
@@ -50,43 +52,29 @@ body {
     width: 340px;
   }
 
-  .box-date-time-back {
-    padding-top: 5px;
-    text-align: right;
-    color: #808A87;
-  }
+    .box-date-time {
+      position: absolute;
+      padding-top: 5px;
+      text-align: right;
+    }
 
-  .box-date-time {
-    position: absolute;
-    padding-top: 5px;
-    text-align: right;
-  }
+    .box-date-time-back {
+      padding-top: 5px;
+      text-align: right;
+      color: #808A87;
+    }
 
-.box-temperature-vertical-stack {
-  display: table;
-  height: 315px;
-  width: 510px;
-}
+/* Temperature Display */
 
 .box-temperature {
-  display: table-cell;
+  position: absolute;
+  height: 315px;
   width: 255px;
+  padding: 0px;
+  font-size: 150pt;
+  text-align: right;
   padding-top: 40px;
-  text-align: right;
 }
-
-.box-celsius {
-  display: table-cell;
-  width: 85px;
-  padding-top: 70px;
-  text-align: right;
-}
-
-.box-vertical-stack {
-  display: table-cell;
-  width: 170px;
-}
-
 
 .box-temperature-back {
   float: left;
@@ -99,24 +87,6 @@ body {
   color: #808A87;
 }
 
-.box-temperature {
-  position: absolute;
-  height: 315px;
-  width: 255px;
-  padding: 0px;
-  font-size: 150pt;
-  text-align: right;
-  padding-top: 40px;
-}
-
-.box-celsius-back {
-  float: left;
-  height: 315px;
-  width: 85px;
-  padding-top: 70px;
-  font-size: 250%;
-}
-
 .box-celsius {
   float: left;
   height: 315px;
@@ -124,6 +94,8 @@ body {
   padding-top: 70px;
   font-size: 250%;
 }
+
+/* Power Save Mode & Energy Usage Display */
 
 .box-vertical-stack {
   float: right;
@@ -136,6 +108,8 @@ body {
   padding-top: 25pt;
   text-transform: uppercase;
 }
+
+/* Buttons */
 
 .controls {
   display: inline-grid;
