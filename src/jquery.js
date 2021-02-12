@@ -4,10 +4,12 @@ $( document ).ready(function() {
   const _updateTempDisplay = () => {
     $( "#temperature-display" ).html(thermostat.temperature)
     $( "#energyusage" ).html(thermostat._currentEnergyUsage())
+    _updateMaxStatement()
   };
 
-  _updateMaxStatement = () => {
+  const _updateMaxStatement = () => {
     isMax = () => {
+      console.log("Calling Max Statement")
       if(thermostat.isMaxTemp()) {
         return "Max"
       } else {
