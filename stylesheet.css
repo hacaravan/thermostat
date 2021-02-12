@@ -23,7 +23,6 @@ body {
 }
 
 .screen {
-  position: relative;
   border: 5px solid black;
   border-radius: 20px;
   margin: 25px;
@@ -36,34 +35,58 @@ body {
 
 .box-clock {
   display: table;
-  height: 15%;
-  width: 100%;
+  height: 55px;
+  width: 510px;
   font-size: 30pt;
 }
 
-.box-time {
+  .box-time {
+    display: table-cell;
+    width: 170px;
+  }
+
+  .box-date {
+    display: table-cell;
+    width: 340px;
+  }
+
+  .box-date-time-back {
+    padding-top: 5px;
+    text-align: right;
+    color: #808A87;
+  }
+
+  .box-date-time {
+    position: absolute;
+    padding-top: 5px;
+    text-align: right;
+  }
+
+.box-temperature-vertical-stack {
+  display: table;
+  height: 315px;
+  width: 510px;
+}
+
+.box-temperature {
+  display: table-cell;
+  width: 255px;
+  padding-top: 40px;
+  text-align: right;
+}
+
+.box-celsius {
+  display: table-cell;
+  width: 85px;
+  padding-top: 70px;
+  text-align: right;
+}
+
+.box-vertical-stack {
   display: table-cell;
   width: 170px;
-  position: relative;
 }
 
-.box-date {
-  display: table-cell;
-  width: 340px;
-  position: relative;
-}
-
-.box-date-time-back {
-  padding-top: 5px;
-  text-align: right;
-  color: #808A87;
-}
-
-.box-date-time {
-  position: absolute;
-  padding-top: 5px;
-  text-align: right;
-}
 
 .box-temperature-back {
   float: left;
@@ -86,7 +109,7 @@ body {
   padding-top: 40px;
 }
 
-.box-celsius {
+.box-celsius-back {
   float: left;
   height: 315px;
   width: 85px;
