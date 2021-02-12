@@ -6,6 +6,17 @@ $( document ).ready(function() {
     $( "#energyusage" ).html(thermostat._currentEnergyUsage())
   };
 
+  _updateMaxStatement = () => {
+    isMax = () => {
+      if(thermostat.isMaxTemp()) {
+        return "Max"
+      } else {
+        return ""
+      };
+    };
+    $( "max-statement" ).html(isMax)
+  };
+
   _updateTempDisplay();
 
   const _updatePowerModeDisplay = () => {

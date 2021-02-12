@@ -58,12 +58,43 @@ describe('Thermostat', function() {
 
   it('returns the current energy usage', function() {
     for (i = 0; i < 3; i++) {thermostat._down()};
-      expect(thermostat._currentEnergyUsage()).toEqual('low-usage')
+      expect(thermostat._currentEnergyUsage()).toEqual('Low')
     for (i = 0; i < 8; i++) {thermostat._up()};
-      expect(thermostat._currentEnergyUsage()).toEqual('medium-usage')
+      expect(thermostat._currentEnergyUsage()).toEqual('Medium')
     thermostat._changePowerSavingMode();
     thermostat._up();
-    expect(thermostat._currentEnergyUsage()).toEqual('high-usage')
+    expect(thermostat._currentEnergyUsage()).toEqual('High')
   });
+
+  describe("isMaxTemp", function() {
+    describe("when power saving mode is on", function() {
+      it("returns false below 25", function() {
+        expect(thermostat.isMaxTemp()).toBe(false);
+      })
+      it("returns true at 25", function() {
+        for(let i = 0; i < 5; i++) {
+          thermostat._up();
+        }
+        expect(thermostat.isMaxTemp()).toBe(true);
+      })
+    })
+    describe("when power saving mode is off", function() {
+      beforeEach( () => {
+        thermostat._changePowerSavingMode();
+      });
+      it("returns false below 32", function() {
+        for(let i = 0; i < 6; i++) {
+          thermostat._up();
+        }
+        expect(thermostat.isMaxTemp()).toBe(false);
+      })
+      it("returns true at 32", function() {
+        for(let i = 0; i < 12; i++) {
+          thermostat._up();
+        }
+        expect(thermostat.isMaxTemp()).toBe(true);
+      })
+    })
+  })
 
 });

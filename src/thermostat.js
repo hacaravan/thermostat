@@ -8,6 +8,14 @@ class Thermostat{
     this.MAXIMUM_TEMPERATURE = 32;
   };
 
+  isMaxTemp() {
+    if(this.powerSavingMode) {
+      return this.temperature === this.MAXIMUM_TEMPERATURE_POWER_SAVING_MODE;
+    } else {
+      return this.temperature === this.MAXIMUM_TEMPERATURE;
+    };
+  }
+
   _up() {
     if (this.powerSavingMode === true && this.temperature === this.MAXIMUM_TEMPERATURE_POWER_SAVING_MODE)
       {throw new Error ('maximum temperature in power saving mode is 25˚C')}
@@ -34,11 +42,11 @@ class Thermostat{
 
   _currentEnergyUsage() {
     if (this.temperature < 18) {
-      return "low-usage"
+      return "Low"
     } else if (this.temperature <= 25) {
-      return "medium-usage"
+      return "Medium"
     } else {
-      return "high-usage"
+      return "High"
     }
   };
 
