@@ -5,7 +5,11 @@ $( document ).ready(function() {
   _updateTempDisplay();
 
   const _updatePowerModeDisplay = () => {
-    if()
+    if(thermostat.powerSavingMode) {
+      $( "#powersavingmode-text" ).text("Power Save");
+    } else {
+      $( "#powersavingmode-text" ).text("Power Save OFF");
+    };
   };
 
     $( "a" ).click(function( event ) {
@@ -29,14 +33,8 @@ $( document ).ready(function() {
     });
 
     $( "#powersavingmode" ).click( function() {
-      if(thermostat.powerSavingMode) {
-        thermostat._changePowerSavingMode();
-        $( "#powersavingmode-text" ).text("Power Save OFF");
-        _updateTempDisplay();
-      } else {
-        thermostat._changePowerSavingMode();
-        $( "#powersavingmode-text" ).text("Power Save");
-        _updateTempDisplay();
-      };
+      thermostat._changePowerSavingMode();
+      _updatePowerModeDisplay();
+      _updateTempDisplay();
     });
 });
