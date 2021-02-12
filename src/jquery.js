@@ -1,7 +1,11 @@
 $( document ).ready(function() {
   thermostat = new Thermostat;
 
-  const _updateTempDisplay = () => { $( "#temperature-display" ).html(thermostat.temperature) };
+  const _updateTempDisplay = () => {
+    $( "#temperature-display" ).html(thermostat.temperature)
+    $( "#energyusage" ).html(thermostat._currentEnergyUsage())
+  };
+
   _updateTempDisplay();
 
   const _updatePowerModeDisplay = () => {
@@ -37,4 +41,6 @@ $( document ).ready(function() {
       _updatePowerModeDisplay();
       _updateTempDisplay();
     });
+
+
 });
